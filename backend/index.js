@@ -54,10 +54,11 @@ app.use(session({
   secret: 'keyboard cat',  // change in production
   resave: false,
   saveUninitialized: false,
-  cookie: {
-    sameSite: "lax",
-    secure: false
-  }
+ cookie: {
+  sameSite: "none",
+  secure: true
+}
+
 }));
 
 // ✅ Initialize passport and session support
